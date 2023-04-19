@@ -11,11 +11,13 @@ module.exports = {
     filename: 'build.js',
     chunkFilename: '[name].bundle.js',
   },
+    
   plugins: [
     // new DashboardPlugin() //,
     // new BundleAnalyzerPlugin(),
     new VueLoaderPlugin()
   ],
+    
   node: {
     __dirname: false,
     __filename: false
@@ -27,9 +29,9 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader'
-        ],
+        ], 
       },
-      {
+      { 
         test: /\.scss$/,
         use: [
           'vue-style-loader',
